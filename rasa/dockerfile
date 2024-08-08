@@ -15,3 +15,5 @@ RUN pip install spacy && \
 
 # Expose the port RASA will run on
 EXPOSE 5005
+
+CMD []

@@ -1,6 +1,5 @@
 tasks:
-  - init: python -m pip install --upgrade pip rasa[spacy]
-  - command: cd rasa && rasa train && rasa shell
+  - init: cd rasa && docker build -t my-rasa-bot . && docker run -it -p 5005:5005 my-rasa-bot
 
 vscode:
   extensions:
@@ -9,6 +8,3 @@ vscode:
 
 image: gitpod/workspace-full
 
-ports:
-  - port: 8080
-    onOpen: open-preview

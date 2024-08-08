@@ -19,7 +19,8 @@ services:
       context: ./rasa4jaca
     image: dial4jaca-image  # Replace this with the actual Docker image for dial4jaca
     ports:
-      - "8080:8080"  # Assuming the service runs on port 8080
+      - "8080:8080"
+      - "3272:3272"
     networks:
       - rasa-network
 
