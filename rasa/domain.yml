@@ -1,0 +1,39 @@
+version: "3.1"
+
+intents:
+  - call_jason_agent
+  - inform_stress_other
+  - inform_self_stress
+
+actions:
+  - action_call_jason_agent
+
+entities:
+  - name
+
+slots:
+  intentName:
+    type: any
+    mappings:
+      - type: from_intent
+        value: "Call Jason Agent"
+        intent: call_jason_agent
+      
+      - type: from_intent
+        value: "inform_stress_other"
+        intent: inform_stress_other
+      
+      - type: from_intent
+        value: "inform_self_stress"
+        intent: inform_self_stress
+
+  name:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: name
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,14 @@
+# Use the official RASA SDK image
+FROM rasa/rasa-sdk
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the actions directory into the container
+COPY . /app/actions
+
+# Expose the default action server port
+EXPOSE 5055
+
+# Run the action server
+CMD ["start", "--actions", "actions"]

@@ -1,0 +1,17 @@
+# Use the official RASA image
+FROM rasa/rasa
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the RASA project files into the container
+COPY . /app
+
+USER root
+
+# Install the Portuguese spaCy model (pt_core_news_lg)
+RUN pip install spacy && \
+    python -m spacy download pt_core_news_lg
+
+# Expose the port RASA will run on
+EXPOSE 5005

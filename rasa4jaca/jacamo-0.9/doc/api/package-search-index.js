@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"jacamo.infra"},{"l":"jacamo.platform"},{"l":"jacamo.project"},{"l":"jacamo.util"}]

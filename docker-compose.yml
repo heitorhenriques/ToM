@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  rasa:
+    build: 
+      context: ./rasa
+    image: my-rasa-bot
+    ports:
+      - "5005:5005"
+    volumes:
+      - .:/app
+    command: >
+      train && shell
+    depends_on:
+      - action_server
+      - dial4jaca
+    networks:
+      - rasa-network
+
+  action_server:
+    build:
+      context: ./actions
+    image: my-rasa-actions
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions
+    command: >
+      start --actions actions
+    networks:
+      - rasa-network
+
+  dial4jaca:
+    build: 
+      context: ./rasa4jaca
+    image: dial4jaca-image  # Replace this with the actual Docker image for dial4jaca
+    ports:
+      - "8080:8080"  # Assuming the service runs on port 8080
+    networks:
+      - rasa-network
+
+networks:
+  rasa-network:
+    driver: bridge

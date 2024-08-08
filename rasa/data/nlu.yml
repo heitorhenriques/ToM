@@ -1,0 +1,62 @@
+version: "3.1"
+
+nlu:
+- intent: call_jason_agent
+  examples: |
+    - há quanto tempo
+    - olá
+    - oi
+    - opa
+    - fala aí
+    - fala
+    - saudações
+    - oi tudo bem
+    - e aí
+    - eae
+
+- intent: inform_stress_other
+  examples: |
+    - [heridiotes](name) tem estado sob muita pressão no hospital.
+    - Tenho notado que [otto](name) está errando com frequência na dosagem de medicamentos no hospital.
+    - [thiago](name) está enfrentando muita pressão no hospital.
+    - [maria](name) tem expressado que está se sentindo sobrecarregada no hospital.
+    - [heridiotes](name) tem estado lidando com muita pressão no hospital.
+    - Tenho notado que [otto](name) tem cometido alguns erros em seu trabalho no hospital.
+    - [thiago](name) tem expressado que está encontrando dificuldades para lidar com a carga de trabalho no hospital.
+    - [maria](name) tem estado enfrentando muita pressão no hospital.
+    - [heridiotes](name) está lidando com muita pressão no hospital.
+    - [otto](name) tem estado sob muita pressão no hospital.
+    - [thiago](name) tem estado sob muita pressão no hospital e isso tem levado a erros na medicação dos pacientes.
+    - Tenho notado que [maria](name) está errando com frequência na dosagem de medicamentos no hospital.
+    - [heridiotes](name) está enfrentando muita pressão no hospital e isso tem levado a erros na documentação dos pacientes.
+    - [otto](name) tem expressado que está se sentindo sobrecarregada no hospital e isso tem levado a erros de comunicação com outros membros da equipe.
+    - [thiago](name) tem estado lidando com muita pressão no hospital e isso tem levado a erros na interpretação de exames.
+    - Tenho notado que [maria](name) tem cometido alguns erros em seu trabalho no hospital devido ao estresse acumulado.
+    - [heridiotes](name) tem expressado que está encontrando dificuldades para lidar com a carga de trabalho no hospital e isso tem levado a erros na administração de medicamentos.
+    - [otto](name) tem estado enfrentando muita pressão no hospital e isso tem levado a erros na preparação de materiais para cirurgias.
+    - [thiago](name) está lidando com muita pressão no hospital e isso tem levado a erros na programação de consultas.
+    - [maria](name) tem estado sob muita pressão no hospital e isso tem levado a erros na documentação de históricos médicos dos pacientes.
+
+
+- intent: inform_self_stress
+  examples: |
+    - Estou trabalhando em um ambiente muito estressante ultimamente.
+    - Sinto que estou enfrentando muitas demandas no trabalho.
+    - Tenho me sentido muito ansioso e estressado por causa das longas horas de trabalho no hospital.
+    - Acho que estou sofrendo de estresse acumulado por causa da rotina intensa de trabalho no hospital.
+    - Sinto que estou sobrecarregado com o grande número de pacientes e tarefas no hospital.
+    - Tenho notado que estou apresentando alguns sinais de estresse por causa do trabalho no hospital.
+    - Estou enfrentando muitas situações difíceis no trabalho no hospital.
+    - Preciso compartilhar com alguém que estou passando por uma fase estressante no ambiente hospitalar.
+    - Sinto que estou perdendo o equilíbrio entre o trabalho no hospital e minha vida pessoal.
+    - Estou me sentindo esgotado e estressado devido ao ambiente desafiador do hospital.
+    - Estou trabalhando em um ambiente muito estressante ultimamente e estou tendo dificuldades para lidar com a pressão no hospital.
+    - Sinto que estou enfrentando muitas demandas no trabalho e isso está me causando um grande estresse no ambiente hospitalar.
+    - Tenho me sentido muito ansioso e estressado por causa das longas horas de trabalho no hospital e estou procurando formas de lidar com isso.
+    - Acho que estou sofrendo de estresse acumulado por causa da rotina intensa de trabalho no hospital e preciso de ajuda para lidar com isso.
+    - Sinto que estou sobrecarregado com o grande número de pacientes e tarefas no hospital, e isso está me deixando estressado.
+    - Tenho notado que estou apresentando alguns sinais de estresse por causa do trabalho no hospital e gostaria de encontrar formas de aliviar essa pressão.
+    - Estou enfrentando muitas situações difíceis no trabalho no hospital e isso está me deixando muito estressado.
+    - Preciso compartilhar com alguém que estou passando por uma fase estressante no ambiente hospitalar e preciso de ajuda para lidar com isso.
+    - Sinto que estou perdendo o equilíbrio entre o trabalho no hospital e minha vida pessoal, e isso está me deixando estressado.
+    - Estou me sentindo esgotado e estressado devido ao ambiente desafiador do hospital e preciso de ajuda para encontrar formas de lidar com isso.

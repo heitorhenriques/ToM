@@ -1,0 +1,25 @@
+/*
+    JaCaMo Project File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+*/
+
+mas writing_paper {
+
+    agent bob
+    agent alice
+    agent carol
+
+    organisation opaper: wp-os.xml {
+        group paper_group: wpgroup {
+            responsible-for: s1
+            players: bob editor
+                     alice writer
+                     carol writer
+        }
+        scheme s1: writePaperSch
+    }
+
+    // to use JCMWeb platform, you have to uncomment the line below and run using gradle
+    // platform: jacamo.web.JCMWeb("--main 2181 --restPort 8080")
+}

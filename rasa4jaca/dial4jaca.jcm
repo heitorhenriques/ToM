@@ -1,0 +1,17 @@
+mas dial4jaca {
+
+    agent delegator:delegator.asl{
+		join: wp
+    	focus: wp.dial4JaCa
+    	goals: hello
+        beliefs: users([maria,thiago,otto,heridiotes])
+    }
+
+	workspace wp{
+		artifact dial4JaCa:br.pucrs.smart.Dial4JaCa.Dial4JaCaArtifact
+	}
+	
+	platform: br.pucrs.smart.Dial4JaCa.RestArtifact("--main 2181 --restPort 8080")
+
+}
+

@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: call jason agent
+  steps:
+    - intent: call_jason_agent
+    - action: action_call_jason_agent
+
+- story: inform stress other
+  steps:
+    - intent: inform_stress_other
+    - action: action_call_jason_agent
+
+- story: inform self stress
+  steps:
+    - intent: inform_self_stress
+    - action: action_call_jason_agent
