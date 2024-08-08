@@ -3,12 +3,12 @@ version: '3.8'
 services:
   action_server:
     build:
-      context: ./actions
+      context: ./rasa/actions
     image: my-rasa-actions
     ports:
       - "5055:5055"
     volumes:
-      - ./actions:/app/actions
+      - ./rasa/actions:/app/actions
     command: >
       start --actions actions
     networks:

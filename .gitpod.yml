@@ -1,13 +1,14 @@
 tasks:
-  - before: python -m pip install --upgrade pip rasa[spacy]
-  - command: docker-compose build && docker-compose up
+  - init: python -m pip install --upgrade pip rasa[spacy]
+  - command: cd rasa && rasa train && rasa shell
 
 vscode:
   extensions:
      - https://open-vsx.org/api/tabajara-krausburg/jacamo4code/1.2.1/file/tabajara-krausburg.jacamo4code-1.2.1.vsix
      - redhat.vscode-xml
 
-image: gitpod/workspace-full-vnc
+image: gitpod/workspace-full
+
 ports:
-  - port: 6080
+  - port: 8080
     onOpen: open-preview
