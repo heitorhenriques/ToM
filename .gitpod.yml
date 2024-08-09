@@ -1,10 +1,24 @@
-vscode:
-  extensions:
-     - https://open-vsx.org/api/tabajara-krausburg/jacamo4code/1.2.1/file/tabajara-krausburg.jacamo4code-1.2.1.vsix
-     - redhat.vscode-xml
-
 image:
   file: dockerfile
+
+tasks:
+  - name: RASA Server
+    command: |
+      cd rasa && rasa shell
+
+  - name: RASA SDK Actions
+    command: |
+      cd && rasa run actions
+
+  - name: Gradle Build
+    command: |
+      cd rasa4jaca && docker build -t agents .
+
+vscode:
+  extensions:
+    - ms-python.python
+    - redhat.java
+    - GabrielBB.vscode-lombok
 
 ports:
   - port: 5055
