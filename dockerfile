@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     libopenblas-dev \
     openjdk-11-jdk \
     git \
+    gradle \
     bash \
     fontconfig \
     ttf-dejavu \

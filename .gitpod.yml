@@ -8,12 +8,11 @@ tasks:
 
   - name: RASA SDK Actions
     command: |
-      cd && rasa run actions
+      cd rasa && rasa run actions
 
   - name: Gradle Build
     command: |
-      cd rasa4jaca && docker build -t agents .
-
+      cd rasa4jaca && gradle build
 vscode:
   extensions:
     - ms-python.python
