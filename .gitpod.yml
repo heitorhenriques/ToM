@@ -1,7 +1,3 @@
-tasks:
-  - before: docker-compose build
-  - command: cd rasa && docker build -t my-rasa-bot . 
-
 vscode:
   extensions:
      - https://open-vsx.org/api/tabajara-krausburg/jacamo4code/1.2.1/file/tabajara-krausburg.jacamo4code-1.2.1.vsix
