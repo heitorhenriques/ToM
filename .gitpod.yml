@@ -1,5 +1,5 @@
 tasks:
-  - init: cd rasa && docker build -t my-rasa-bot . && docker run -it -p 5005:5005 my-rasa-bot
+  - command: docker-compose build && docker-compose up 
 
 vscode:
   extensions:
