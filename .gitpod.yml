@@ -3,7 +3,8 @@ vscode:
      - https://open-vsx.org/api/tabajara-krausburg/jacamo4code/1.2.1/file/tabajara-krausburg.jacamo4code-1.2.1.vsix
      - redhat.vscode-xml
 
-image: gitpod/workspace-full
+image:
+  file: dockerfile
 
 ports:
   - port: 5055
