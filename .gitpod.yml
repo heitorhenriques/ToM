@@ -2,21 +2,21 @@ image:
   file: dockerfile
 
 tasks:
-  - name: Maria
+  - name: Chatbot 1
     command: |
       cd rasa && rasa shell -p 5005
 
-  - name: thiago
+  - name: Chatbot 2
     command: |
-      cd rasa && rasa shell -p 5005
+      cd rasa && rasa shell -p 5006
 
-  - name: otto
+  - name: Chatbot 3
     command: |
-      cd rasa && rasa shell -p 5005
+      cd rasa && rasa shell -p 5007
 
-  - name: heridiotes
+  - name: Chatbot 4
     command: |
-      cd rasa && rasa shell -p 5005
+      cd rasa && rasa shell -p 5008
 
   - name: RASA SDK Actions
     command: |
@@ -24,7 +24,7 @@ tasks:
 
   - name: Gradle Build
     command: |
-      cd rasa4jaca && gradle build
+      cd rasa4jaca && gradle build && gradle run
 vscode:
   extensions:
     - ms-python.python
