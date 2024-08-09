@@ -4,19 +4,19 @@ image:
 tasks:
   - name: Maria
     command: |
-      cd rasa && rasa train && rasa shell -p 5005
+      cd rasa && rasa shell -p 5005
 
   - name: thiago
     command: |
-      cd rasa && rasa train && rasa shell -p 5005
+      cd rasa && rasa shell -p 5005
 
   - name: otto
     command: |
-      cd rasa && rasa train && rasa shell -p 5005
+      cd rasa && rasa shell -p 5005
 
   - name: heridiotes
     command: |
-      cd rasa && rasa train && rasa shell -p 5005
+      cd rasa && rasa shell -p 5005
 
   - name: RASA SDK Actions
     command: |
