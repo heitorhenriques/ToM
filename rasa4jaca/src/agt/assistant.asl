@@ -32,7 +32,8 @@
 +!responder(RequestedBy, ResponseId, IntentName, Params, Contexts)
 	: (IntentName == "inform_self_stress") & .my_name(A)
 <-
-	+believe(A,stressed(A));
+	.term2string(A,Name);
+	+believe(A,stressed(Name));
 	.print("Informou self stress!");
 	reply("Você informou que está estressada.");
 	.
