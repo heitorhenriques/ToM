@@ -8,7 +8,7 @@ repositories {
 
     maven { 
         url "https://raw.githubusercontent.com/jacamo-lang/mvn-repo/master"
-        allowInsecureProtocol = true 
+        //allowInsecureProtocol = true 
     }
     maven { url "https://repo.gradle.org/gradle/libs-releases-local" }
     maven { url "https://jitpack.io" }
@@ -51,7 +51,7 @@ dependencies {
 task run (type: JavaExec, dependsOn: 'classes') {
     description 'runs the application'
     group ' JaCaMo'
-    mainClass = 'jacamo.infra.JaCaMoLauncher'
+    main = 'jacamo.infra.JaCaMoLauncher'
     args 'dial4jaca.jcm'
     classpath sourceSets.main.runtimeClasspath
 }

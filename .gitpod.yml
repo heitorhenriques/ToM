@@ -2,9 +2,21 @@ image:
   file: dockerfile
 
 tasks:
-  - name: RASA Server
+  - name: Maria
     command: |
-      cd rasa && rasa shell
+      cd rasa && rasa train && rasa shell -p 5005
+
+  - name: thiago
+    command: |
+      cd rasa && rasa train && rasa shell -p 5005
+
+  - name: otto
+    command: |
+      cd rasa && rasa train && rasa shell -p 5005
+
+  - name: heridiotes
+    command: |
+      cd rasa && rasa train && rasa shell -p 5005
 
   - name: RASA SDK Actions
     command: |
@@ -23,7 +35,7 @@ ports:
   - port: 5055
     visibility: public
   - port: 3272
-    onOpen: open-preview
+    onOpen: open-browser
   - port: 8080
     visibility: public
   - port: 5005
