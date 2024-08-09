@@ -25,7 +25,7 @@ class action_call_jason_agent(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        url = "http://127.0.0.1:8080/webhook"  # Substitua "seu_endereco_aqui" pelo endereço correto
+        url = "http://0.0.0.0:8080/webhook"
         # Dados da solicitação
         data = {
             "tracker": {

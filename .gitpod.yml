@@ -1,5 +1,6 @@
 tasks:
-  - command: docker-compose build && docker-compose up 
+  - before: docker-compose build
+  - command: cd rasa && docker build -t my-rasa-bot . 
 
 vscode:
   extensions:
@@ -7,4 +8,20 @@ vscode:
      - redhat.vscode-xml
 
 image: gitpod/workspace-full
+
+ports:
+  - port: 5055
+    visibility: public
+  - port: 3272
+    onOpen: open-preview
+  - port: 8080
+    visibility: public
+  - port: 5005
+    visibility: public
+  - port: 5006
+    visibility: public
+  - port: 5007
+    visibility: public
+  - port: 5008
+    visibility: public
 

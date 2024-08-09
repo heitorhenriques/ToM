@@ -1,20 +1,5 @@
-version: '3.8'
 
 services:
-  rasa:
-    build: 
-      context: ./rasa
-    image: my-rasa-bot
-    ports:
-      - "5005:5005"
-    volumes:
-      - ./rasa:/app
-    depends_on:
-      - action_server
-      - dial4jaca
-    networks:
-      - rasa-network
-
   action_server:
     build:
       context: ./rasa/actions
